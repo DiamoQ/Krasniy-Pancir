@@ -1,0 +1,131 @@
+.episode-card {
+  display: grid;
+  grid-template-columns: fluid-to-laptop(60, 30) 172px 1fr;
+  gap: fluid-to-laptop(20, 18);
+  align-items: center;
+  padding-block: 40px;
+
+  @include laptop {
+    padding-top: 30px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+    'video number'
+    'body body';
+    padding: 20px;
+    background-color: var(--color-black-08);
+    border-radius: var(--border-radius-s);
+  }
+
+  &__number {
+    font-size: fluid-to-laptop(30, 24);
+    font-weight: 600;
+
+    @include mobile {
+      grid-area: number;
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    @include mobile {
+      grid-area: number;
+    }
+
+    &-player {
+      width: 172px;
+      height: auto;
+      aspect-ratio: 172 / 118;
+      object-fit: cover;
+      border: var(--border);
+      border-radius: var(--border-radius-l);
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-button {
+      @include abs-center;
+      @include flex-center;
+      @include square(50px);
+
+      padding: 0;
+      color: var(--color-white);
+      background-color: color-mix(
+        in srgb,
+        var(--color-black) 60%,
+        transparent 40%
+      );
+      border:  none;
+      border-radius: 50%;
+
+      @include hover {
+        background-color: color-mix(
+            in srgb,
+            var(--color-red-45) 100%,
+            transparent 0%
+        );
+        scale: 1.05;
+
+        .icon {
+          scale: 1.05;
+        }
+      }
+
+      &:active {
+        scale: 1.05;
+      }
+
+      &:not(.is-active) {
+        scale: 1.05;
+      }
+
+      &-icon {
+        &.icon {
+          --iconSize: 30px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    display: grid;
+    row-gap: fluid-to-laptop(14, 10);
+
+    @include mobile {
+      grid-area: body;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px 16px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__duration {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    padding: fluid-to-laptop(8, 6) fluid-to-laptop(10, 6);
+    background-color: var(--color-black-08);
+    border: var(--border);
+    border-radius: var(--border-radius-s);
+
+
+    @include laptop {
+      border-radius: var(--border-radius-xs);
+    }
+  }
+}

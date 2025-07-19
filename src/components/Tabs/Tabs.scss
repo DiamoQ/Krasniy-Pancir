@@ -1,0 +1,26 @@
+.tabs {
+  --tabsBodyRowGap: 0;
+  --tabsNoneActiveContentDisplay: none;
+
+  display: grid;
+  row-gap: 20px;
+
+  &--enable-only-on-mobile {
+    @include mobile-above {
+      --tabsNoneActiveContentDisplay: block;
+      --tabsNavigationDisplay: none;
+    }
+  }
+
+  &__body {
+    display: grid;
+    row-gap: var(--tabsBodyRowGap);
+  }
+
+  &__content {
+
+    &:not(.is-active) {
+      display: var(--tabsNoneActiveContentDisplay);
+    }
+  }
+}
