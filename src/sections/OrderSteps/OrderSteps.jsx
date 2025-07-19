@@ -2,8 +2,9 @@
 import './OrderSteps.scss'
 import Section from "@/layouts/Section";
 import Grid from "@/components/Grid";
-import devicesItems from "@/sections/OrderSteps/devicesitems";
-import OrderStepsCard from "src/components/OrderStepsCard";
+import stepsitems from "@/sections/OrderSteps/stepsitems";
+import OrderStepsCard from "@/components/OrderStepsCard";
+
 
 const OrderSteps = (props) => {
 
@@ -13,12 +14,13 @@ const OrderSteps = (props) => {
           titleId='order-steps-title'
       >
         <Grid
-            columns={3}
+            columns={4}
         >
-            {devicesItems.map((card, index) => (
+            {stepsitems.map((card, index) => (
                 <OrderStepsCard
                     {...card}
-                    key={index }
+                    key={index}
+                    number={index + 1}
                 />
             ))}
         </Grid>

@@ -1,27 +1,25 @@
-import deviceImgSrc_1 from '@/assets/images/devices/smartphones.svg'
-import deviceImgSrc_2 from '@/assets/images/devices/tablet.svg'
-import deviceImgSrc_3 from '@/assets/images/devices/smarttv.svg'
-import deviceImgSrc_4 from '@/assets/images/devices/laptops.svg'
-import deviceImgSrc_5 from '@/assets/images/devices/consoles.svg'
-import deviceImgSrc_6 from '@/assets/images/devices/vr.svg'
+import stepImgSrc_1 from '@/assets/images/order-steps/step1.svg'
+import stepImgSrc_2 from '@/assets/images/order-steps/step2.svg'
+import stepImgSrc_3 from '@/assets/images/order-steps/step3.svg'
+import stepImgSrc_4 from '@/assets/images/order-steps/step4.svg'
 
-const devicesItems = [
+const stepsitems = [
     {
         title: 'Выберите продукты и добавьте их в корзину',
-        imgSrc: deviceImgSrc_1,
+        imgSrc: stepImgSrc_1,
     },
     {
         title: 'Выберите способ приготовления',
-        imgSrc: deviceImgSrc_2,
+        imgSrc: stepImgSrc_2,
     },
     {
-        title: 'Оформите заказ онлайн  или по телефону',
-        imgSrc: deviceImgSrc_3,
+        title: 'Оформите заказ онлайн или по телефону',
+        imgSrc: stepImgSrc_3,
     },
     {
-        title: 'Ожидайте доставку  в ближайшее время',
-        imgSrc: deviceImgSrc_4,
+        title: 'Ожидайте доставку в ближайшее время',
+        imgSrc: stepImgSrc_4,
     },
 ];
 
-export default devicesItems;
+export default stepsitems;

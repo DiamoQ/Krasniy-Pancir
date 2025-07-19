@@ -47,7 +47,7 @@ const PlansCompare = () => {
       },
       {
           cells: [
-              'Devices',
+              'OrderSteps',
               'Watch on one device simultaneously',
               'Watch on Two device simultaneously',
               'Watch on Four device simultaneously',

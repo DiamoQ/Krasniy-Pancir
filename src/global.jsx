@@ -20,8 +20,8 @@ export default function (props) {
 
   return (
     <>
-      <Head htmlAttributes={{ lang: 'en' }}>
-        <title>Stream Vibe | {title}</title>
+      <Head htmlAttributes={{ lang: 'ru' }}>
+        <title>Красный панцирь | {title}</title>
         <script src='/src/main.js'  type="module" />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
@@ -31,7 +31,6 @@ export default function (props) {
       <Header url={url} isFixed={isHeaderFixed} />
       <Content isResetPaddingTop={isHeaderFixed}>
           {children}
-          <Banner />
       </Content>
       <Footer />
     </>

@@ -1,14 +1,16 @@
 .burger-button {
   @include flex-center(true);
-  @include square(51px);
 
+  width: 44px;
+  height: 40px;
+  z-index: 200;
   padding: 0;
-  background-color: var(--color-black-10);
-  border: var(--border-width-m) solid var(--color-black-15);
-  border-radius: var(--border-radius-xs);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-xxs);
 
   @include hover {
-    background-color: var(--color-red-60);
+    background-color: var(--color-red-hover);
     border-color: transparent;
   }
 
@@ -33,7 +35,7 @@
 
   &__line {
     fill: none;
-    stroke: var(--color-white);
+    stroke: var(--color-red-accent);
     stroke-width: 6;
     stroke-linecap: round;
     stroke-dasharray: 60 207;

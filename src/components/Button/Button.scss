@@ -1,14 +1,14 @@
 .button {
   @include flex-center(true);
 
-  column-gap: 4px;
-  padding: fluid-to-laptop(18, 14) fluid-to-laptop(24, 20);
-  font-weight: 600;
+  column-gap: 10px;
+  padding: fluid-to-laptop(12, 12) 10px;
+  font-weight: 500;
   color: var(--color-white);
   text-wrap: nowrap;
-  background-color: var(--color-red-45);
+  background-color: var(--color-red-accent);
   border: none;
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-xxs);
   user-select: none;
   cursor: pointer;
 
@@ -18,7 +18,7 @@
 
   @include hover {
     color: var(--color-white);
-    background-color: var(--color-red-60);
+    background-color: var(--color-red-hover);
   }
 
   &:active {
@@ -31,39 +31,66 @@
     pointer-events: none;
   }
 
-  &:has(.button__icon:only-child) {
-    @include square(fluid-to-laptop(56, 44));
+  &:has(.button__icon) {
+    padding-block: fluid-to-laptop(8, 8);
+  }
 
-    padding: 0;
+  &:has(.button__icon:only-child) {
+    @include square(fluid(44, 40));
+
+    padding: 8px 10px;
+  }
+
+  svg {
+    fill: var(--color-white);
   }
 
   &--transparent {
     background-color: transparent;
 
     &:has(.button__icon:only-child) {
-      @include square(44px);
+      @include square(fluid(38, 38));
 
       .button__icon {
-        --iconSize: #{fluid-to-laptop(34, 24)};
+        --iconSize: #{fluid-to-laptop(24, 24)};
       }
     }
   }
 
-  &--black-06,
-  &--black-08,
-  &--black-10 {
-    border: var(--border)
+  &--white {
+    @include hover {
+      svg {
+        fill: var(--color-white);
+      }
+    }
+
+    background-color: var(--color-white);
+    padding-inline: 20px;
+    color: var(--color-black-accent);
+
+    &:has(.button__icon:only-child) {
+      @include square(fluid(38, 38));
+
+      .button__icon {
+        --iconSize: #{fluid-to-laptop(24, 24)};
+      }
+    }
+
+    svg {
+      fill: var(--color-red-accent);
+    }
   }
 
-  &--black-06 {
-    background-color: var(--color-black-06);
-  }
+  &.soc1als__link {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 6px 10px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: var(--transition-duration-longer);
 
-  &--black-08 {
-    background-color: var(--color-black-08);
-  }
-
-  &--black-10 {
-    background-color: var(--color-black-10);
+    @include hover {
+      background-color: var(--color-red-accent);
+    }
   }
 }

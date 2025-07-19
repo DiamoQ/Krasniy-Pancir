@@ -1,22 +1,20 @@
 import Hero from "../sections/Hero";
 import Categories from "@/sections/Categories";
-import Devices from "@/sections/Devices";
+import OrderSteps from "@/sections/OrderSteps";
 import Questions from "@/sections/Questions";
 import Plans from "@/sections/Plans";
+import CompanyTitleBanner from "@/components/CompanyTitleBanner";
 
 export const metadata = {
-    title: 'Home',
+    title: 'Главная',
     isHeaderFixed: true,
 }
 
 export default function () {
   return (
     <>
-        <Hero />
-        <Categories />
-        <Devices />
-        <Questions />
-        <Plans />
+        <CompanyTitleBanner />
+        <OrderSteps />
     </>
   )
 }

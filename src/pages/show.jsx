@@ -9,10 +9,10 @@ export const metadata = {
 export default function () {
     return (
         <>
-            <ShowBanner />
-            <MovieDetails
-                seasons={seasonItems}
-            />
+            {/*<ShowBanner />*/}
+            {/*<MovieDetails*/}
+            {/*    seasons={seasonItems}*/}
+            {/*/>*/}
         </>
     )
 }

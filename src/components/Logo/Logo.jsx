@@ -1,13 +1,13 @@
 import './Logo.scss'
 import classNames from 'classnames'
-import logoImgSrc from '@/assets/images/logo.svg'
+import logoImgSrc from '@/assets/images/logo.png'
 
 const Logo = (props) => {
     const {
         className,
         loading = lazy
     } = props
-    const title = 'Home'
+    const title = 'Главная'
 
     return (
         <a
@@ -20,8 +20,8 @@ const Logo = (props) => {
                 className="logo__image"
                 src={logoImgSrc}
                 alt=''
-                width={199}
-                height={60}
+                width={185}
+                height={40}
                 loading={loading}
             />
         </a>

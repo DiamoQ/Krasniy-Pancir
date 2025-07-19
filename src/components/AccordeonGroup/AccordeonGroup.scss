@@ -67,7 +67,6 @@
     padding: fluid-to-laptop(34, 24);
     break-inside: avoid-column;
 
-
     @include tablet-above {
       &--last-column-item {
         &::after {

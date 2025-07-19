@@ -1,20 +1,20 @@
-import './DeviceCard.scss'
+import './OrderStepsCard.scss'
 
-const DeviceCard = (props) => {
+const OrderStepsCard = (props) => {
     const {
+        number,
         title,
-        description,
         imgSrc,
     } = props
 
     return (
         <div
-            className='device-card'
+            className='order-step-card'
         >
-            <header className='device-card__header'>
-                <div className='device-card__image-wrapper'>
+            <header className='order-step-card__header'>
+                <div className='order-step-card__image-wrapper'>
                     <img
-                        className='device-card__image'
+                        className='order-step-card__image'
                         src={imgSrc}
                         width={40}
                         height={40}
@@ -22,13 +22,11 @@ const DeviceCard = (props) => {
                         loading='lazy'
                     />
                 </div>
-                <h3 className='device-card__title h4'>{title}</h3>
+                <h3 className='order-step-card__title'>{title}</h3>
             </header>
-            <div className='device-card__description'>
-                <p>{description}</p>
-            </div>
+            <span className="order-step-card__number">{number}</span>
         </div>
     )
 }
 
-export default DeviceCard
+export default OrderStepsCard

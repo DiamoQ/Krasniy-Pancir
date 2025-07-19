@@ -1,3 +1,3 @@
-import DeviceCard from './DeviceCard'
+import OrderStepsCard from './OrderStepsCard'
 
-export default DeviceCard
+export default OrderStepsCard
